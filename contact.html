@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Get in touch with Claspio — offices in Madrid, Spain and Dhaka, Bangladesh.">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Contact — Claspio</title>
+    <link rel="icon" href="./img/favicon.svg">
+    <link rel="canonical" href="https://www.claspio.com/contact.html">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+        <div class="container">
+            <a class="brand" href="index.html">
+                <img src="img/logo.svg" alt="Claspio logo">
+                Claspio
+            </a>
+            <nav class="main-nav" aria-label="Primary">
+                <a href="index.html">Home</a>
+                <a href="services.html">Services</a>
+                <a href="about.html">About</a>
+                <a href="contact.html" class="active">Contact</a>
+            </nav>
+            <div class="nav-actions">
+                <a href="contact.html" class="btn btn-primary btn-sm header-cta">Start a project</a>
+                <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false"><span></span></button>
+            </div>
+        </div>
+    </header>
+
+    <main id="main">
+
+        <section class="page-hero">
+            <div class="container">
+                <span class="eyebrow">Contact</span>
+                <h1>Contact our team</h1>
+                <p class="lede">
+                    Don't hesitate to get in touch. We love the challenge of turning your ideas into reality
+                    and are always ready to talk through your project.
+                </p>
+            </div>
+        </section>
+
+        <section>
+            <div class="container split" style="align-items: start;">
+                <div>
+                    <div class="office-grid" style="margin-bottom: 24px;">
+                        <div class="office-card">
+                            <span class="city">Madrid</span>
+                            <dl>
+                                <dt>Address</dt>
+                                <dd>Calle de Abtao 13, 28007 Madrid, Spain</dd>
+                                <dt>Email</dt>
+                                <dd><a href="mailto:hello@claspio.com">hello@claspio.com</a></dd>
+                                <dt>Phone</dt>
+                                <dd>+34 602 559 344</dd>
+                            </dl>
+                        </div>
+                        <div class="office-card">
+                            <span class="city">Dhaka</span>
+                            <dl>
+                                <dt>Address</dt>
+                                <dd>House 29, Road 5, Block C, Rampura, Bansree, Dhaka, Bangladesh</dd>
+                                <dt>Email</dt>
+                                <dd><a href="mailto:hello@claspio.com">hello@claspio.com</a></dd>
+                                <dt>Phone</dt>
+                                <dd>+1 256 258 25 45</dd>
+                            </dl>
+                        </div>
+                    </div>
+                    <p>
+                        Prefer to talk services first? Have a look at our <a href="services.html" style="color: var(--cyan); font-weight: 600;">full service list</a>
+                        before reaching out — it'll help us route your message to the right team faster.
+                    </p>
+                </div>
+
+                <form class="contact-form" method="POST" data-endpoint="php/index.php">
+                    <div class="form-row">
+                        <div class="field">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" placeholder="Your name" required>
+                        </div>
+                        <div class="field">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" placeholder="you@company.com" required>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label for="text">Message</label>
+                        <textarea id="text" name="text" rows="6" placeholder="Tell us about your project…" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Send message</button>
+                    <p class="form-status" role="status"></p>
+                    <p class="form-note">We typically reply within one business day.</p>
+                </form>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a class="brand" href="index.html">
+                        <img src="img/logo.svg" alt="Claspio logo">
+                        Claspio
+                    </a>
+                    <p>An engineering partner for AI, data and cloud — from Madrid and Dhaka to wherever your team is.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="services.html#ai-ml">AI &amp; ML Services</a></li>
+                        <li><a href="services.html#ai-integration">AI Integration</a></li>
+                        <li><a href="services.html#offshore-dev">Offshore Development</a></li>
+                        <li><a href="services.html#big-data">Big Data Analytics</a></li>
+                        <li><a href="services.html#cloud">Cloud Solutions</a></li>
+                        <li><a href="services.html#talent-pool">Talent Pool</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="about.html#team">Team</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li><a href="mailto:hello@claspio.com">hello@claspio.com</a></li>
+                        <li><a href="contact.html">Madrid, Spain</a></li>
+                        <li><a href="contact.html">Dhaka, Bangladesh</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <span>© <span data-year>2026</span> Claspio. All rights reserved.</span>
+                <div class="footer-social">
+                    <a href="https://www.linkedin.com/company/claspio" aria-label="LinkedIn" target="_blank" rel="noopener">in</a>
+                    <a href="https://twitter.com/claspio" aria-label="Twitter" target="_blank" rel="noopener">tw</a>
+                    <a href="https://www.github.com/claspio" aria-label="GitHub" target="_blank" rel="noopener">gh</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/site.js"></script>
+</body>
+
+</html>
