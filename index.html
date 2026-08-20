@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Claspio — AI, Data &amp; Cloud Engineering Partner</title>
-    <link rel="icon" href="./img/favicon.svg">
+    <link rel="icon" href="./img/favicon.png">
     <link rel="canonical" href="https://www.claspio.com/">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -22,8 +22,8 @@
     <header class="site-header">
         <div class="container">
             <a class="brand" href="index.html">
-                <img src="img/logo.svg" alt="Claspio logo">
-                Claspio
+                <img src="img/logo.png" alt="Claspio logo">
+                <span class="brand-name">Claspio</span>
             </a>
             <nav class="main-nav" aria-label="Primary">
                 <a href="index.html" class="active">Home</a>
@@ -41,11 +41,21 @@
     <main id="main">
 
         <section class="hero">
+            <div class="hero-tech-bg"></div>
+            <div class="hero-corner-tl"></div>
+            <div class="hero-corner-tr"></div>
+            <div class="hero-corner-bl"></div>
+            <div class="hero-corner-br"></div>
+            <div class="hero-vline"></div>
+            <div class="hero-node hero-node-1"></div>
+            <div class="hero-node hero-node-2"></div>
+            <div class="hero-node hero-node-3"></div>
+            <div class="hero-node hero-node-4"></div>
             <div class="container hero-grid">
-                <div>
+                <div data-reveal>
                     <span class="hero-badge">Engineering partner for AI-driven companies</span>
                     <span class="eyebrow">AI · Data · Cloud</span>
-                    <h1>We turn <span class="gradient-text">AI ambition</span><br>into shipped software.</h1>
+                    <h1>We build <span class="gradient-text typing-cursor" data-typing='["AI products.","ML systems.","data platforms.","cloud infra.","the future."]'>AI products.</span></h1>
                     <p class="lede">
                         Claspio is an engineering partner for companies building with AI. We design and ship
                         machine learning products, integrate AI into existing systems, run offshore development
@@ -56,12 +66,16 @@
                         <a href="services.html" class="btn btn-ghost">Explore services</a>
                     </div>
                     <div class="hero-stats">
-                        <div class="stat"><b>2</b><span>Global delivery hubs</span></div>
-                        <div class="stat"><b>6</b><span>Core service lines</span></div>
-                        <div class="stat"><b>10+</b><span>Years combined expertise</span></div>
+                        <div class="stat"><b data-count="2" data-suffix="">2</b><span>Global delivery hubs</span></div>
+                        <div class="stat"><b data-count="6" data-suffix="">6</b><span>Core service lines</span></div>
+                        <div class="stat"><b data-count="10" data-suffix="+">10+</b><span>Years combined expertise</span></div>
                     </div>
                 </div>
-                <div class="hero-panel">
+                <div class="hero-panel" data-reveal="right">
+                    <div class="hero-panel-header">
+                        <span class="live-dot"></span>
+                        Capabilities
+                    </div>
                     <ul class="hero-panel-list">
                         <li><span class="dot"></span> Custom ML &amp; predictive models built on your data</li>
                         <li><span class="dot"></span> LLMs and copilots integrated into real products</li>
@@ -73,9 +87,48 @@
             </div>
         </section>
 
+        <!-- Tech stack ticker -->
+        <div class="ticker-wrap">
+            <div class="ticker-track">
+                <span class="ticker-item"><span class="ticker-dot"></span>Python</span>
+                <span class="ticker-item"><span class="ticker-dot"></span>TensorFlow</span>
+                <span class="ticker-item"><span class="ticker-dot"></span>PyTorch</span>
+                <span class="ticker-item"><span class="ticker-dot"></span>AWS</span>
+                <span class="ticker-item"><span class="ticker-dot"></span>Azure</span>
+                <span class="ticker-item"><span class="ticker-dot"></span>GCP</span>
+                <span class="ticker-item"><span class="ticker-dot"></span>Kubernetes</span>
+                <span class="ticker-item"><span class="ticker-dot"></span>Docker</span>
+                <span class="ticker-item"><span class="ticker-dot"></span>LangChain</span>
+                <span class="ticker-item"><span class="ticker-dot"></span>OpenAI API</span>
+                <span class="ticker-item"><span class="ticker-dot"></span>Spark</span>
+                <span class="ticker-item"><span class="ticker-dot"></span>Kafka</span>
+                <span class="ticker-item"><span class="ticker-dot"></span>dbt</span>
+                <span class="ticker-item"><span class="ticker-dot"></span>Snowflake</span>
+                <span class="ticker-item"><span class="ticker-dot"></span>React</span>
+                <span class="ticker-item"><span class="ticker-dot"></span>Node.js</span>
+                <!-- duplicate for seamless loop -->
+                <span class="ticker-item"><span class="ticker-dot"></span>Python</span>
+                <span class="ticker-item"><span class="ticker-dot"></span>TensorFlow</span>
+                <span class="ticker-item"><span class="ticker-dot"></span>PyTorch</span>
+                <span class="ticker-item"><span class="ticker-dot"></span>AWS</span>
+                <span class="ticker-item"><span class="ticker-dot"></span>Azure</span>
+                <span class="ticker-item"><span class="ticker-dot"></span>GCP</span>
+                <span class="ticker-item"><span class="ticker-dot"></span>Kubernetes</span>
+                <span class="ticker-item"><span class="ticker-dot"></span>Docker</span>
+                <span class="ticker-item"><span class="ticker-dot"></span>LangChain</span>
+                <span class="ticker-item"><span class="ticker-dot"></span>OpenAI API</span>
+                <span class="ticker-item"><span class="ticker-dot"></span>Spark</span>
+                <span class="ticker-item"><span class="ticker-dot"></span>Kafka</span>
+                <span class="ticker-item"><span class="ticker-dot"></span>dbt</span>
+                <span class="ticker-item"><span class="ticker-dot"></span>Snowflake</span>
+                <span class="ticker-item"><span class="ticker-dot"></span>React</span>
+                <span class="ticker-item"><span class="ticker-dot"></span>Node.js</span>
+            </div>
+        </div>
+
         <section id="services">
             <div class="container">
-                <div class="section-head center">
+                <div class="section-head center" data-reveal>
                     <span class="eyebrow">What we do</span>
                     <h2>Six services, <span class="gradient-text">one</span> accountable partner</h2>
                     <p class="lede" style="margin: 0 auto;">
@@ -85,41 +138,135 @@
                 </div>
 
                 <div class="grid-3">
-                    <div class="card">
+                    <div class="card" data-reveal data-delay="1">
                         <div class="icon-badge g"><img src="img/service/machine-learning.svg" alt=""></div>
                         <h3>AI &amp; ML Services</h3>
-                        <p>Predictive, descriptive and prescriptive models, NLP and computer vision, built and validated on your real data.</p>
+                        <div class="card-tags">
+                            <span class="card-tag">Predictive</span>
+                            <span class="card-tag">NLP</span>
+                            <span class="card-tag">Computer Vision</span>
+                        </div>
+                        <ul class="card-bullets">
+                            <li>Custom predictive &amp; prescriptive models on your data</li>
+                            <li>NLP: classification, extraction &amp; summarization</li>
+                            <li>Computer vision for quality control &amp; automation</li>
+                            <li>MLOps: monitoring, retraining &amp; deployment pipelines</li>
+                            <li>Explainability &amp; governance for regulated industries</li>
+                        </ul>
                         <a class="card-link" href="services.html#ai-ml">Learn more →</a>
                     </div>
-                    <div class="card">
+                    <div class="card" data-reveal data-delay="2">
                         <div class="icon-badge c"><img src="img/service/rocket.svg" alt=""></div>
                         <h3>AI Integration</h3>
-                        <p>Embed LLMs, copilots and RAG pipelines into your existing products and internal workflows — safely and observably.</p>
+                        <div class="card-tags">
+                            <span class="card-tag">LLMs</span>
+                            <span class="card-tag">RAG</span>
+                            <span class="card-tag">Copilots</span>
+                        </div>
+                        <ul class="card-bullets">
+                            <li>LLM &amp; copilot integration into existing products</li>
+                            <li>RAG pipelines over your own knowledge base</li>
+                            <li>Prompt engineering, evaluation &amp; cost optimization</li>
+                            <li>AI feature observability &amp; human-in-the-loop review</li>
+                            <li>API &amp; workflow automation connecting AI to your systems</li>
+                        </ul>
                         <a class="card-link" href="services.html#ai-integration">Learn more →</a>
                     </div>
-                    <div class="card">
+                    <div class="card" data-reveal data-delay="3">
                         <div class="icon-badge b"><img src="img/service/computadora.svg" alt=""></div>
                         <h3>Offshore Software Development</h3>
-                        <p>Dedicated, senior engineering teams that extend your product roadmap without the overhead of local hiring.</p>
+                        <div class="card-tags">
+                            <span class="card-tag">Full-stack</span>
+                            <span class="card-tag">Agile</span>
+                            <span class="card-tag">Dedicated Teams</span>
+                        </div>
+                        <ul class="card-bullets">
+                            <li>Senior full-stack, mobile &amp; backend engineering teams</li>
+                            <li>Dedicated-team or fixed-scope delivery models</li>
+                            <li>Agile delivery with sprint demos &amp; transparent reporting</li>
+                            <li>CI/CD, code quality &amp; automated testing built in</li>
+                            <li>Seamless handoff and integration with your in-house team</li>
+                        </ul>
                         <a class="card-link" href="services.html#offshore-dev">Learn more →</a>
                     </div>
-                    <div class="card">
+                    <div class="card" data-reveal data-delay="2">
                         <div class="icon-badge g"><img src="img/service/big-data.svg" alt=""></div>
                         <h3>Big Data Analytics</h3>
-                        <p>Data engineering, warehousing and pipelines that turn raw, messy data into decisions your teams trust.</p>
+                        <div class="card-tags">
+                            <span class="card-tag">Data Engineering</span>
+                            <span class="card-tag">BI</span>
+                            <span class="card-tag">Pipelines</span>
+                        </div>
+                        <ul class="card-bullets">
+                            <li>Data engineering: ingestion, ETL/ELT &amp; orchestration</li>
+                            <li>Data warehousing &amp; lakehouse architecture</li>
+                            <li>Multi-angle BI dashboards &amp; reporting</li>
+                            <li>Real-time &amp; streaming analytics where it matters</li>
+                            <li>Data quality, governance &amp; access control</li>
+                        </ul>
                         <a class="card-link" href="services.html#big-data">Learn more →</a>
                     </div>
-                    <div class="card">
+                    <div class="card" data-reveal data-delay="3">
                         <div class="icon-badge c"><img src="img/service/cloud.svg" alt=""></div>
                         <h3>Cloud Solutions</h3>
-                        <p>Architecture, migration and DevOps across AWS, Azure and GCP — built for cost, security and scale.</p>
+                        <div class="card-tags">
+                            <span class="card-tag">AWS</span>
+                            <span class="card-tag">Azure</span>
+                            <span class="card-tag">GCP</span>
+                        </div>
+                        <ul class="card-bullets">
+                            <li>Cloud architecture &amp; migration across AWS, Azure &amp; GCP</li>
+                            <li>Infrastructure as code, CI/CD &amp; DevOps automation</li>
+                            <li>Kubernetes &amp; container platform design</li>
+                            <li>Cost optimization, monitoring &amp; reliability engineering</li>
+                            <li>Security hardening &amp; compliance readiness</li>
+                        </ul>
                         <a class="card-link" href="services.html#cloud">Learn more →</a>
                     </div>
-                    <div class="card">
+                    <div class="card" data-reveal data-delay="4">
                         <div class="icon-badge b"><img src="img/service/comportamiento.svg" alt=""></div>
                         <h3>Talent Pool</h3>
-                        <p>A vetted bench of engineers, data scientists and ML specialists ready to plug into your team on demand.</p>
+                        <div class="card-tags">
+                            <span class="card-tag">On-demand</span>
+                            <span class="card-tag">Vetted</span>
+                            <span class="card-tag">Senior</span>
+                        </div>
+                        <ul class="card-bullets">
+                            <li>Software engineers, data scientists &amp; ML specialists</li>
+                            <li>Cloud, DevOps &amp; data engineering specialists</li>
+                            <li>Pre-vetted for technical skill &amp; communication</li>
+                            <li>Contract, staff augmentation or full pod models</li>
+                            <li>Fast ramp-up — typically within days, not months</li>
+                        </ul>
                         <a class="card-link" href="services.html#talent-pool">Learn more →</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Metrics bar -->
+        <section style="padding: 0 0 80px;">
+            <div class="container">
+                <div class="metrics-bar" data-reveal>
+                    <div class="metric-item">
+                        <span class="metric-val" data-count="2" data-suffix="">2</span>
+                        <span class="metric-label">Delivery Hubs</span>
+                        <p class="metric-desc">Madrid &amp; South Asia — covering European and Asian time zones.</p>
+                    </div>
+                    <div class="metric-item">
+                        <span class="metric-val" data-count="6" data-suffix="">6</span>
+                        <span class="metric-label">Service Lines</span>
+                        <p class="metric-desc">AI/ML, integration, offshore dev, big data, cloud &amp; talent.</p>
+                    </div>
+                    <div class="metric-item">
+                        <span class="metric-val" data-count="10" data-suffix="+">10+</span>
+                        <span class="metric-label">Years Experience</span>
+                        <p class="metric-desc">Combined engineering expertise across AI and cloud domains.</p>
+                    </div>
+                    <div class="metric-item">
+                        <span class="metric-val" data-count="1" data-suffix=" day">1 day</span>
+                        <span class="metric-label">First Response</span>
+                        <p class="metric-desc">We reply within one business day with concrete next steps.</p>
                     </div>
                 </div>
             </div>
@@ -127,28 +274,28 @@
 
         <section>
             <div class="container">
-                <div class="section-head center">
+                <div class="section-head center" data-reveal>
                     <span class="eyebrow">Who we work with</span>
                     <h2>Built for every stage of <span class="gradient-text">growth</span></h2>
                     <p class="lede" style="margin: 0 auto 52px;">From early validation to enterprise transformation — our model flexes around your reality, not the other way around.</p>
                 </div>
                 <div class="partner-grid">
-                    <div class="partner-card">
+                    <div class="partner-card" data-reveal data-delay="1">
                         <span class="partner-num">01</span>
                         <h3>Startups</h3>
                         <p>From proof of concept and MVP to validate your ideas, to partnering through every growth milestone as you scale.</p>
                     </div>
-                    <div class="partner-card">
+                    <div class="partner-card" data-reveal data-delay="2">
                         <span class="partner-num">02</span>
                         <h3>Enterprises</h3>
                         <p>End-to-end digital transformation — AI platforms, data infrastructure and cloud architecture that scale with your business.</p>
                     </div>
-                    <div class="partner-card">
+                    <div class="partner-card" data-reveal data-delay="3">
                         <span class="partner-num">03</span>
                         <h3>IT Companies</h3>
                         <p>A senior engineering bench to extend your capacity, embed in your team, or own a technical scope end-to-end.</p>
                     </div>
-                    <div class="partner-card">
+                    <div class="partner-card" data-reveal data-delay="4">
                         <span class="partner-num">04</span>
                         <h3>Consultancies</h3>
                         <p>Technical partnership on AI and data engagements — we handle the engineering while you lead on strategy.</p>
@@ -159,7 +306,7 @@
 
         <section class="bg-alt">
             <div class="container split">
-                <div>
+                <div data-reveal="left">
                     <span class="eyebrow">Why Claspio</span>
                     <h2>Science <span class="gradient-text">over</span> opinion.</h2>
                     <p>
@@ -173,9 +320,9 @@
                         <li>Delivery hubs in Europe and South Asia for round-the-clock coverage</li>
                         <li>We stay until it's in production, not just in a slide deck</li>
                     </ul>
-                    <a href="about.html" class="btn btn-outline" style="margin-top: 12px;">More about us</a>
+                    <a href="about.html" class="btn btn-outline" style="margin-top: 24px;">More about us</a>
                 </div>
-                <div class="split-media">
+                <div class="split-media" data-reveal="right">
                     <img src="img/about/what-we-do.jpg" alt="Claspio team collaborating">
                 </div>
             </div>
@@ -183,27 +330,27 @@
 
         <section class="bg-navy">
             <div class="container">
-                <div class="section-head center">
+                <div class="section-head center" data-reveal>
                     <span class="eyebrow">How we work</span>
                     <h2>A clear path from idea to <span class="gradient-text">production</span></h2>
                 </div>
                 <div class="steps">
-                    <div class="step">
+                    <div class="step" data-reveal data-delay="1">
                         <span class="num">01</span>
                         <h4>Discover</h4>
                         <p>We map your data, systems and goals to scope the right-sized engagement.</p>
                     </div>
-                    <div class="step">
+                    <div class="step" data-reveal data-delay="2">
                         <span class="num">02</span>
                         <h4>Design</h4>
                         <p>Architecture and model design reviewed with your team before a line of code ships.</p>
                     </div>
-                    <div class="step">
+                    <div class="step" data-reveal data-delay="3">
                         <span class="num">03</span>
                         <h4>Build</h4>
                         <p>Agile delivery in short cycles, with working software and demos every sprint.</p>
                     </div>
-                    <div class="step">
+                    <div class="step" data-reveal data-delay="4">
                         <span class="num">04</span>
                         <h4>Run</h4>
                         <p>We monitor, retrain and support in production — not just at handover.</p>
@@ -214,9 +361,9 @@
 
         <section class="cta-bold">
             <div class="container">
-                <h2>Thinking of building with <span class="gradient-text">AI?</span></h2>
-                <p>Tell us about your project — we'll reply within one business day with a concrete next step.</p>
-                <a href="contact.html" class="btn btn-primary">Start a conversation</a>
+                <h2 data-reveal>Thinking of building with <span class="gradient-text">AI?</span></h2>
+                <p data-reveal data-delay="2">Tell us about your project — we'll reply within one business day with a concrete next step.</p>
+                <a href="contact.html" class="btn btn-primary" data-reveal data-delay="3">Start a conversation</a>
             </div>
         </section>
 
@@ -227,8 +374,8 @@
             <div class="footer-grid">
                 <div class="footer-brand">
                     <a class="brand" href="index.html">
-                        <img src="img/logo.svg" alt="Claspio logo">
-                        Claspio
+                        <img src="img/logo.png" alt="Claspio logo">
+                        <span class="brand-name">Claspio</span>
                     </a>
                     <p>An engineering partner for AI, data and cloud — from Madrid and Dhaka to wherever your team is.</p>
                 </div>
