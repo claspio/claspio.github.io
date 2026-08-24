@@ -1,9 +1,7 @@
 (function () {
 
   /* ── Consent-aware Google Analytics ── */
-  var ANALYTICS_ID = 'G-737ST4RNRZ';
   var ANALYTICS_CHOICE_KEY = 'claspio_analytics_consent';
-  var analyticsStarted = false;
   var analyticsChoice = readAnalyticsChoice();
 
   function readAnalyticsChoice() {
@@ -28,29 +26,24 @@
   }
 
   function enableAnalytics() {
-    window['ga-disable-' + ANALYTICS_ID] = false;
-    if (analyticsStarted) {
-      window.gtag('config', ANALYTICS_ID);
-      return;
-    }
-
-    analyticsStarted = true;
-    window.dataLayer = window.dataLayer || [];
-    window.gtag = window.gtag || function () { window.dataLayer.push(arguments); };
-    window.gtag('js', new Date());
-    window.gtag('config', ANALYTICS_ID, {
-      allow_google_signals: false,
-      allow_ad_personalization_signals: false
+    if (typeof window.gtag !== 'function') return;
+    window.gtag('consent', 'update', {
+      ad_storage: 'denied',
+      ad_user_data: 'denied',
+      ad_personalization: 'denied',
+      analytics_storage: 'granted'
     });
-
-    var script = document.createElement('script');
-    script.async = true;
-    script.src = 'https://www.googletagmanager.com/gtag/js?id=' + encodeURIComponent(ANALYTICS_ID);
-    document.head.appendChild(script);
   }
 
   function disableAnalytics() {
-    window['ga-disable-' + ANALYTICS_ID] = true;
+    if (typeof window.gtag === 'function') {
+      window.gtag('consent', 'update', {
+        ad_storage: 'denied',
+        ad_user_data: 'denied',
+        ad_personalization: 'denied',
+        analytics_storage: 'denied'
+      });
+    }
     deleteAnalyticsCookies();
   }
 

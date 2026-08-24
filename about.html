@@ -1,6 +1,24 @@
 <!doctype html>
 <html lang="en">
 <head>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    var claspioAnalyticsConsent = null;
+    try { claspioAnalyticsConsent = localStorage.getItem('claspio_analytics_consent'); } catch (error) {}
+    gtag('consent', 'default', {
+      ad_storage: 'denied',
+      ad_user_data: 'denied',
+      ad_personalization: 'denied',
+      analytics_storage: claspioAnalyticsConsent === 'granted' ? 'granted' : 'denied'
+    });
+  </script>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-737ST4RNRZ"></script>
+  <script>
+    gtag('js', new Date());
+    gtag('config', 'G-737ST4RNRZ', { allow_google_signals: false, allow_ad_personalization_signals: false });
+  </script>
   <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="description" content="Meet Claspio, a senior engineering partner helping organizations turn AI, data, cloud, and product ambitions into dependable systems.">
   <meta name="robots" content="index,follow,max-image-preview:large"><meta name="theme-color" content="#061D49">
