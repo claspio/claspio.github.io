@@ -87,14 +87,14 @@
 			public function contact() {
 				// recive & validation
 				$text  = $name = $email = NULL;
-				$name  = ( isset( $_POST[ 'name' ] ) && !empty( $_POST[ 'name' ] ) && is_string( $_POST[ 'name' ] ) && !preg_match( '/(<|>|\\\|\/|\d)/i', filter_var( $_POST[ 'name' ] ) ) )
-					? $_POST[ 'name' ]
+				$name  = ( isset( $_POST[ 'name' ] ) && is_string( $_POST[ 'name' ] ) && trim( strip_tags( $_POST[ 'name' ] ) ) !== '' )
+					? trim( strip_tags( $_POST[ 'name' ] ) )
 					: NULL;
-				$email = ( isset( $_POST[ 'email' ] ) && !empty( $_POST[ 'email' ] ) && is_string( $_POST[ 'email' ] ) && preg_match( '//i', $_POST[ 'email' ] ) )
+				$email = ( isset( $_POST[ 'email' ] ) && !empty( $_POST[ 'email' ] ) && is_string( $_POST[ 'email' ] ) )
 					? trim( filter_var( $_POST[ 'email' ], FILTER_VALIDATE_EMAIL ) )
 					: NULL;
-				$text  = ( isset( $_POST[ 'text' ] ) && !empty( $_POST[ 'text' ] ) && is_string( $_POST[ 'text' ] ) && !preg_match( '/(<|>|\\\|\/|\d)/i', filter_var( $_POST[ 'text' ] ) ) )
-					? filter_var( $_POST[ 'text' ] )
+				$text  = ( isset( $_POST[ 'text' ] ) && is_string( $_POST[ 'text' ] ) && trim( strip_tags( $_POST[ 'text' ] ) ) !== '' )
+					? trim( strip_tags( $_POST[ 'text' ] ) )
 					: NULL;
 				// set errors
 				if ( !isset( $name ) || empty( $name ) || is_null( $name ) ) {
@@ -140,9 +140,9 @@
 						$mailer->isHTML( TRUE );
 						$mailer->Subject = $this->configContact->subject;
 						$mailer->Body    = $this->render( 'message', [
-							'name'  => $name,
-							'email' => $email,
-							'text'  => $text,
+							'name'  => htmlspecialchars( $name, ENT_QUOTES, 'UTF-8' ),
+							'email' => htmlspecialchars( $email, ENT_QUOTES, 'UTF-8' ),
+							'text'  => nl2br( htmlspecialchars( $text, ENT_QUOTES, 'UTF-8' ) ),
 						] );
 						if ( isset( $this->configContact->debug ) && $this->configContact->debug ) {
 							$mailer->SMTPDebug = 3;

@@ -1,5 +1,29 @@
 (function () {
 
+  /* ── Header state ── */
+  var header = document.querySelector('.site-header');
+  function updateHeader() {
+    if (header) header.classList.toggle('is-scrolled', window.scrollY > 24);
+  }
+  updateHeader();
+  window.addEventListener('scroll', updateHeader, { passive: true });
+
+  /* ── Homepage signal field ── */
+  var heroField = document.querySelector('[data-hero]');
+  if (heroField && window.matchMedia('(pointer: fine)').matches) {
+    heroField.addEventListener('pointermove', function (event) {
+      var rect = heroField.getBoundingClientRect();
+      var x = ((event.clientX - rect.left) / rect.width) * 100;
+      var y = ((event.clientY - rect.top) / rect.height) * 100;
+      heroField.style.setProperty('--hero-x', x.toFixed(2) + '%');
+      heroField.style.setProperty('--hero-y', y.toFixed(2) + '%');
+    });
+    heroField.addEventListener('pointerleave', function () {
+      heroField.style.setProperty('--hero-x', '72%');
+      heroField.style.setProperty('--hero-y', '36%');
+    });
+  }
+
   /* ── Scroll Reveal ── */
   var revealEls = document.querySelectorAll('[data-reveal]');
   if (revealEls.length && 'IntersectionObserver' in window) {
@@ -89,15 +113,22 @@
   if (form) {
     var status = form.querySelector('.form-status');
     var submitBtn = form.querySelector('button[type="submit"]');
+    var submitLabel = submitBtn ? submitBtn.textContent : 'Send enquiry';
 
     form.addEventListener('submit', function (e) {
       e.preventDefault();
 
       var data = new URLSearchParams();
+      var context = [];
+      if (form.company && form.company.value.trim()) context.push('Company: ' + form.company.value.trim());
+      if (form.service && form.service.value) context.push('Area of interest: ' + form.service.value);
+      var message = form.text.value.trim();
+      if (context.length) message = context.join('\n') + '\n\nProject context:\n' + message;
+
       data.append('action', 'contact');
-      data.append('name', form.name.value);
-      data.append('email', form.email.value);
-      data.append('text', form.text.value);
+      data.append('name', form.name.value.trim());
+      data.append('email', form.email.value.trim());
+      data.append('text', message);
 
       if (submitBtn) { submitBtn.disabled = true; submitBtn.textContent = 'Sending…'; }
       if (status) { status.className = 'form-status'; status.textContent = ''; }
@@ -123,7 +154,7 @@
           if (status) { status.textContent = 'Something went wrong. Please email us directly at hello@claspio.com.'; status.className = 'form-status show err'; }
         })
         .finally(function () {
-          if (submitBtn) { submitBtn.disabled = false; submitBtn.textContent = 'Send message'; }
+          if (submitBtn) { submitBtn.disabled = false; submitBtn.textContent = submitLabel; }
         });
     });
   }
